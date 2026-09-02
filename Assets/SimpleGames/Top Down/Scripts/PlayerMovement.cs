@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Exit"))
         {
             //Win the game!
-            SceneManager.LoadScene("You Win");
+            SceneManager.LoadScene("You Win"); 
         }
     }
 
