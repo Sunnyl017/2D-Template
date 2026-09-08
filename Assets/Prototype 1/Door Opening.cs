@@ -55,7 +55,7 @@ public class DoorOpening : MonoBehaviour
         {
             Debug.Log("hit found" + hitInfo.point);
             Debug.DrawRay(hitInfo.point, hitInfo.normal, Color.cyan, 2f);
-            Destroy(gameObject);
+
         }
         
         
