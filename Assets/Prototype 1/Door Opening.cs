@@ -22,13 +22,17 @@ public class DoorOpening : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeValid -= Time.deltaTime;
+        if (timeValid > 0)
+        {
+            timeValid -= Time.deltaTime;
 
+        }
+        else
+        {
+        timeValid = 0;  
+        }
 
-    }
-    public void FixedUpdate()
-    {
-        if(Keyboard.current.aKey.isPressed)
+        if (Keyboard.current.aKey.isPressed)
         {
             isLeft = true;
         }
@@ -49,21 +53,60 @@ public class DoorOpening : MonoBehaviour
             Debug.DrawRay(transform.position, Vector2.right * 3f, Color.purple, 2f);
             timeValid = 3f;
         }
-
+        Destroy(hitInfo.collider.gameObject);
 
         if (valid && timeValid > 0)
         {
+            
             Debug.Log("hit found" + hitInfo.point);
             Debug.DrawRay(hitInfo.point, hitInfo.normal, Color.cyan, 2f);
 
         }
-        
-        
+
+
 
         hitPoint = hitInfo.point;
         hitNormal = hitInfo.normal;
-
     }
+    //public void FixedUpdate()
+    //{
+    //    if(Keyboard.current.aKey.isPressed)
+    //    {
+    //        isLeft = true;
+    //    }
+    //    else if (Keyboard.current.dKey.isPressed)
+    //    {
+    //        isLeft = false;
+    //    }
+
+    //    if (Mouse.current.leftButton.wasPressedThisFrame && isLeft)
+    //    {
+    //        valid = Physics2D.Raycast(transform.position, Vector2.left, 3f, LayerMask.GetMask("Door"));
+    //        Debug.DrawRay(transform.position, Vector2.left * 3f, Color.purple, 2f);
+    //        timeValid = 3f;
+    //    }
+    //    else if (Mouse.current.leftButton.wasPressedThisFrame)
+    //    {
+    //        valid = Physics2D.Raycast(transform.position, Vector2.right, LayerMask.GetMask("Door"));
+    //        Debug.DrawRay(transform.position, Vector2.right * 3f, Color.purple, 2f);
+    //        timeValid = 3f;
+    //    }
+
+
+    //    if (valid && timeValid > 0)
+    //    {
+    //        Destroy(hitInfo.collider.gameObject);
+    //        Debug.Log("hit found" + hitInfo.point);
+    //        Debug.DrawRay(hitInfo.point, hitInfo.normal, Color.cyan, 2f);
+
+    //    }
+
+
+
+    //    hitPoint = hitInfo.point;
+    //    hitNormal = hitInfo.normal;
+
+    //}
 }
 
 
