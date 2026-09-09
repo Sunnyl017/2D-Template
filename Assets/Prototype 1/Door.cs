@@ -11,6 +11,11 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            
+      
+    }
+
+    public void DoorOpen(float location)                                                                                                                                                        
+    {
+        transform.position = new Vector2(location, location);
     }
 }
