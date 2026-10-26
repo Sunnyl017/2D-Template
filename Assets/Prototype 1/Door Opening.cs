@@ -49,14 +49,12 @@ public class DoorOpening : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame && isLeft)
         {
             hitInfo = Physics2D.Raycast(transform.position, Vector2.left, 3f, Mask);
-     
             Debug.DrawRay(transform.position, Vector2.left * 3f, Color.purple, 2f);
             timeValid = 3f;
         }
         else if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             hitInfo = Physics2D.Raycast(transform.position, Vector2.right, Mask);
-           
             Debug.DrawRay(transform.position, Vector2.right * 3f, Color.purple, 2f);
             timeValid = 3f;
            
