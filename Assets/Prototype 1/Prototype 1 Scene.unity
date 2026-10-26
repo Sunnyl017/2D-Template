@@ -933,7 +933,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1053,7 +1053,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1370,8 +1370,8 @@ Transform:
   m_GameObject: {fileID: 916322808}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.15, y: -0.6605, z: -0.11}
-  m_LocalScale: {x: 1, y: 1.0373759, z: 1}
+  m_LocalPosition: {x: 3.2662, y: -0.8966, z: -0.11}
+  m_LocalScale: {x: 1.2323, y: 1.3692325, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 873182853}
@@ -1392,7 +1392,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1425,6 +1425,7 @@ MonoBehaviour:
   Mask:
     serializedVersion: 2
     m_Bits: 128
+  gameObject: {fileID: 932093855}
 --- !u!60 &916322815
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1490,7 +1491,7 @@ GameObject:
   - component: {fileID: 932093860}
   m_Layer: 7
   m_Name: Door
-  m_TagString: Test
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1609,8 +1610,8 @@ Transform:
   m_GameObject: {fileID: 932093855}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.99, y: 1.9812, z: 0}
-  m_LocalScale: {x: 1, y: 1.8561897, z: 1}
+  m_LocalPosition: {x: 1.99, y: 1.9725, z: 0}
+  m_LocalScale: {x: 1, y: 1.8955219, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1943,7 +1944,7 @@ GameObject:
   - component: {fileID: 1104132953}
   m_Layer: 7
   m_Name: Door (1)
-  m_TagString: Test
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3461,7 +3462,7 @@ GameObject:
   - component: {fileID: 1989926270}
   m_Layer: 7
   m_Name: Door (2)
-  m_TagString: Test
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
