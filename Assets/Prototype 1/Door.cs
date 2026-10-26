@@ -14,8 +14,9 @@ public class Door : MonoBehaviour
       
     }
 
-    public void DoorOpen(float location)                                                                                                                                                        
+    public void DoorOpen()                                                                                                                                                        
     {
-        transform.position = new Vector2(location, location);
+        Destroy(this);
+        //transform.position = new Vector2(location, location);
     }
 }

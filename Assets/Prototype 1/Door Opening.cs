@@ -7,13 +7,14 @@ using UnityEngine.Rendering;
 public class DoorOpening : MonoBehaviour
 {
     public bool valid;
-    public RaycastHit hitInfo;
+    public RaycastHit2D hitInfo;
     public Vector3 hitPoint;
     public Vector3 hitNormal;
     public bool isLeft;
     public float timeValid = 3;
     public Door doorCode;
     public LayerMask Mask;
+  public GameObject gameObject;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -47,23 +48,28 @@ public class DoorOpening : MonoBehaviour
 
         if (Mouse.current.leftButton.wasPressedThisFrame && isLeft)
         {
-            valid = Physics2D.Raycast(transform.position, Vector2.left, 3f, Mask);
+            hitInfo = Physics2D.Raycast(transform.position, Vector2.left, 3f, Mask);
+     
             Debug.DrawRay(transform.position, Vector2.left * 3f, Color.purple, 2f);
             timeValid = 3f;
         }
         else if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            valid = Physics2D.Raycast(transform.position, Vector2.right, Mask);
+            hitInfo = Physics2D.Raycast(transform.position, Vector2.right, Mask);
+           
             Debug.DrawRay(transform.position, Vector2.right * 3f, Color.purple, 2f);
             timeValid = 3f;
-            doorCode.DoorOpen(100);
+           
         }
        
 
-        if (valid && timeValid > 0)
+        if (hitInfo && timeValid > 0)
         {
-      
-            Debug.Log("hit found" + hitInfo.point);
+            if (hitInfo.collider.CompareTag("Door"))
+            {
+                Destroy(hitInfo.collider.gameObject);
+            }
+            Debug.Log("hit found" + hitInfo);
             Debug.DrawRay(hitInfo.point, hitInfo.normal, Color.cyan, 2f);
             
         }
