@@ -65,10 +65,10 @@ public class DoorOpening : MonoBehaviour
         {
             if (hitInfo.collider.CompareTag("Door"))
             {
-                Destroy(hitInfo.collider.gameObject);
+                hitInfo.collider.gameObject.SetActive(false);
             }
             Debug.Log("hit found" + hitInfo);
-            Debug.DrawRay(hitInfo.point, hitInfo.normal, Color.cyan, 2f);
+            Debug.DrawRay(hitInfo.point, hitInfo.normal, Color.cyan, .5f);
             
         }
 
@@ -77,45 +77,7 @@ public class DoorOpening : MonoBehaviour
         hitPoint = hitInfo.point;
         hitNormal = hitInfo.normal;
     }
-    //public void FixedUpdate()
-    //{
-    //    if(Keyboard.current.aKey.isPressed)
-    //    {
-    //        isLeft = true;
-    //    }
-    //    else if (Keyboard.current.dKey.isPressed)
-    //    {
-    //        isLeft = false;
-    //    }
-
-    //    if (Mouse.current.leftButton.wasPressedThisFrame && isLeft)
-    //    {
-    //        valid = Physics2D.Raycast(transform.position, Vector2.left, 3f, LayerMask.GetMask("Door"));
-    //        Debug.DrawRay(transform.position, Vector2.left * 3f, Color.purple, 2f);
-    //        timeValid = 3f;
-    //    }
-    //    else if (Mouse.current.leftButton.wasPressedThisFrame)
-    //    {
-    //        valid = Physics2D.Raycast(transform.position, Vector2.right, LayerMask.GetMask("Door"));
-    //        Debug.DrawRay(transform.position, Vector2.right * 3f, Color.purple, 2f);
-    //        timeValid = 3f;
-    //    }
-
-
-    //    if (valid && timeValid > 0)
-    //    {
-    //        Destroy(hitInfo.collider.gameObject);
-    //        Debug.Log("hit found" + hitInfo.point);
-    //        Debug.DrawRay(hitInfo.point, hitInfo.normal, Color.cyan, 2f);
-
-    //    }
-
-
-
-    //    hitPoint = hitInfo.point;
-    //    hitNormal = hitInfo.normal;
-
-    //}
+    
 }
 
 
