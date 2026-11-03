@@ -1020,7 +1020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MonsterController
   Target: {fileID: 0}
-  Speed: 4
+  Speed: 2
   RB: {fileID: 859843423}
 --- !u!60 &859843425
 PolygonCollider2D:
@@ -1504,7 +1504,7 @@ MonoBehaviour:
   hitNormal: {x: 0, y: 0, z: 0}
   isLeft: 0
   timeValid: 3
-  doorCode: {fileID: 932093859}
+  doorCode: {fileID: 0}
   Mask:
     serializedVersion: 2
     m_Bits: 128
@@ -1615,8 +1615,8 @@ GameObject:
   - component: {fileID: 932093858}
   - component: {fileID: 932093857}
   - component: {fileID: 932093856}
-  - component: {fileID: 932093859}
   - component: {fileID: 932093860}
+  - component: {fileID: 932093861}
   m_Layer: 7
   m_Name: Door
   m_TagString: Door
@@ -1744,18 +1744,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &932093859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932093855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cb9185c7aec50b4b97cca8afa5bec13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Door
 --- !u!50 &932093860
 Rigidbody2D:
   serializedVersion: 5
@@ -1783,6 +1771,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &932093861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932093855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb9185c7aec50b4b97cca8afa5bec13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Door
+  gameObject: {fileID: 932093855}
+  respawnTimer: 0
 --- !u!1 &984299782
 GameObject:
   m_ObjectHideFlags: 0
@@ -2070,6 +2072,8 @@ GameObject:
   - component: {fileID: 1104132955}
   - component: {fileID: 1104132954}
   - component: {fileID: 1104132953}
+  - component: {fileID: 1104132956}
+  - component: {fileID: 1104132957}
   m_Layer: 7
   m_Name: Door (1)
   m_TagString: Door
@@ -2197,6 +2201,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1104132956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104132952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb9185c7aec50b4b97cca8afa5bec13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Door
+  gameObject: {fileID: 1104132952}
+  respawnTimer: 0
+--- !u!50 &1104132957
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104132952}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1270722957
 GameObject:
   m_ObjectHideFlags: 0
@@ -3588,6 +3633,8 @@ GameObject:
   - component: {fileID: 1989926272}
   - component: {fileID: 1989926271}
   - component: {fileID: 1989926270}
+  - component: {fileID: 1989926273}
+  - component: {fileID: 1989926274}
   m_Layer: 7
   m_Name: Door (2)
   m_TagString: Door
@@ -3715,6 +3762,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1989926273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989926269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb9185c7aec50b4b97cca8afa5bec13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Door
+  gameObject: {fileID: 1989926269}
+  respawnTimer: 0
+--- !u!50 &1989926274
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989926269}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
