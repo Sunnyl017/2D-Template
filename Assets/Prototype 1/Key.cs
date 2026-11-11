@@ -21,7 +21,7 @@ public class Key : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Touch");
-            gm.objective = true;
+            //gm.objective = true;
             Destroy(this.gameObject);
         }
     }
