@@ -1,17 +1,29 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MGameManager : MonoBehaviour
 {
     public bool objective;
+    public static MGameManager Instance;
+    public int sceneIndex;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
     }
+      //private void Awake()
+  //{
+        //if(Instance != null)   
+        //{
+         //   Destroy(gameObject);
+         //   return;
+       // }
+       // Instance = this;
+ // }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadScene()
     {
-        
+        SceneManager.LoadScene(sceneIndex);
     }
+
 }

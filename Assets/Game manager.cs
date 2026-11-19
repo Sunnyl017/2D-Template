@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Gamemanager : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
-public static Gamemanager Instance;
+public static MenuManager Instance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
