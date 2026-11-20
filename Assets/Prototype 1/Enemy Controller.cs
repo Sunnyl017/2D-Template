@@ -17,6 +17,6 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        navMesh.SetDestination(gameObject.transform.position);
+        navMesh.destination = gameObject.transform.position;
     }
 }
