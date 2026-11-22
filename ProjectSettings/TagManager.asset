@@ -17,8 +17,8 @@ TagManager:
   - UI
   - Wall
   - Door
-  - 
-  - 
+  - 1
+  - 9
   - 
   - 
   - 
@@ -44,6 +44,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 998255523
+    locked: 0
+  - name: Button
+    uniqueID: 2577589209
     locked: 0
   m_RenderingLayers:
   - Default

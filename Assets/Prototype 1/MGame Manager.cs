@@ -11,7 +11,7 @@ public class MGameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        objective = false;
     }
       //private void Awake()
   //{

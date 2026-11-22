@@ -3,7 +3,7 @@ using UnityEngine;
 public class Key : MonoBehaviour
 {
 
-    MGameManager gm;
+    public MGameManager gm;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,7 +21,7 @@ public class Key : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Touch");
-            //gm.objective = true;
+            gm.objective = true;
             Destroy(this.gameObject);
         }
     }
